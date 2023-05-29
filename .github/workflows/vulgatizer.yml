@@ -24,7 +24,8 @@ jobs:
       run: |
         pip install -U pip
         pip install python-dateutil
-        pip install pypandoc
+        sudo apt-get update
+        sudo apt-get install -y pandoc
         pip install git+https://github.com/OpenPecha/CommonSpell.git
     - name: Create vulgate text
       run: |
@@ -40,11 +41,7 @@ jobs:
         from CommonSpell.serializers.csv import CSVSerializer
         from CommonSpell.serializers.plain_text import PlainTextSerializer
         from CommonSpell.commonspeller import CommonSpeller
-        from pypandoc.pandoc_download import download_pandoc
-        
-        download_pandoc()
-
-
+      
 
         def run_common_speller(version_dir):
             try:
