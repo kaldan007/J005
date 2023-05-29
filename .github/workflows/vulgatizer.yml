@@ -40,6 +40,9 @@ jobs:
         from CommonSpell.serializers.csv import CSVSerializer
         from CommonSpell.serializers.plain_text import PlainTextSerializer
         from CommonSpell.commonspeller import CommonSpeller
+        from pypandoc.pandoc_download import download_pandoc
+        
+        download_pandoc()
 
 
 
